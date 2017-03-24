@@ -1,7 +1,7 @@
 <resources>
 
     <string name="app_name">CucinaItaliana</string>
-    <string name="quiz_description">Welcome in Cucina Italiana, the app that test your knowledge of the italian traditional cuisine\n\nShow your love for the best food in the world!\n\nGood luck and buon appetito!</string>
+    <string name="app_description">Welcome in Cucina Italiana, the app that test your knowledge of the italian traditional cuisine\n\nShow your love for the best food in the world!\n\nGood luck and buon appetito!</string>
 
     <string name="start_button">start</string>
     <string name="next_button">next</string>
