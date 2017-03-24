@@ -1,0 +1,74 @@
+<resources>
+
+    <string name="app_name">CucinaItaliana</string>
+    <string name="quiz_description">Welcome in Cucina Italiana, the app that test your knowledge of the italian traditional cuisine\n\nShow your love for the best food in the world!\n\nGood luck and buon appetito!</string>
+
+    <string name="start_button">start</string>
+    <string name="next_button">next</string>
+    <string name="done_button">done</string>
+    <string name="reset_button">reset</string>
+
+    <string-array name="multiple_1">
+        <item>What is the cheese used in the preparation of "tiramisù"?</item>
+        <item>Ricotta</item>
+        <item>Mascarpone</item>
+        <item>Cream cheese</item>
+        <item>Mozzarella</item>
+    </string-array>
+
+    <string-array name="multiple_2">
+        <item>What is the native region of "pesto"?</item>
+        <item>Tuscany</item>
+        <item>Sicily</item>
+        <item>Lazio</item>
+        <item>Liguria</item>
+    </string-array>
+
+    <string-array name="multiple_3">
+        <item>What is the cereal most often used to make "polenta"?</item>
+        <item>Corn</item>
+        <item>Spelt</item>
+        <item>Rice</item>
+        <item>Oat</item>
+    </string-array>
+
+    <string-array name="multiple_4">
+        <item>What does "panna cotta" means in italian?</item>
+        <item>Cooked twice</item>
+        <item>Cooked cream</item>
+        <item>Pan fried</item>
+        <item>Super healthy</item>
+    </string-array>
+
+    <string-array name="check_list_1">
+        <item>Which of these ingredients are used in the traditional "carbonara"?</item>
+        <item>Bacon</item>
+        <item>Egg</item>
+        <item>Chili flakes</item>
+        <item>Cream</item>
+        <item>Pasta</item>
+        <item>Parsley</item>
+        <item>Guanciale</item>
+        <item>Pecorino</item>
+    </string-array>
+
+    <string-array name="check_list_2">
+        <item>What are the layers of "lasagne alla bolognese"?</item>
+        <item>Lasagne</item>
+        <item>Mozzarella</item>
+        <item>Mushroom</item>
+        <item>Bechamel sauce</item>
+        <item>Basil</item>
+        <item>Parmigiano Reggiano</item>
+        <item>Tomato sauce</item>
+        <item>Ragù</item>
+    </string-array>
+
+    <string-array name="open_1">
+        <item>What is the name of the typical neapolitan pizza?</item>
+        <item>Margherita</item>
+    </string-array>
+
+    <string name="congratulation">Congratulation, you finished the CucinaItaliana quiz!\n\nYour score is:</string>
+
+</resources>
