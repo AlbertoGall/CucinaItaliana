@@ -41,7 +41,7 @@
     </string-array>
 
     <string-array name="check_list_1">
-        <item>Which of these ingredients are used in the traditional "carbonara"?</item>
+        <item>Which of these ingredients are used in the "carbonara"?</item>
         <item>Bacon</item>
         <item>Egg</item>
         <item>Chili flakes</item>
