@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.alberto.cucinaitaliana.MultipleChoiceActivity">
+
+    <TextView
+        android:id="@+id/question_multiple"
+        style="@style/Question" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/answers_1"
+                style="@style/AnswerMultipleChoice" />
+
+            <RadioButton
+                android:id="@+id/answers_2"
+                style="@style/AnswerMultipleChoice" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/answers_3"
+                style="@style/AnswerMultipleChoice" />
+
+            <RadioButton
+                android:id="@+id/answers_4"
+                style="@style/AnswerMultipleChoice" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/next_button" />
+
+</LinearLayout>
