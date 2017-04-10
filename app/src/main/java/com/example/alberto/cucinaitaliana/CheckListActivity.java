@@ -8,6 +8,11 @@ import android.widget.TextView;
 
 public class CheckListActivity extends MainActivity {
 
+    static final String DONE = "questionAnswered";
+    static final String COLOR = "answerColor";
+
+    int backgroundColor[] = new int[8];
+
     final CheckBox[] boxes = new CheckBox[8];
 
     public boolean done = false;
@@ -34,7 +39,24 @@ public class CheckListActivity extends MainActivity {
             boxes[i].setText(text[i+1]);
         }
 
+        String textButton = getString(R.string.done_button);
+
+        if (savedInstanceState != null) {
+            done = savedInstanceState.getBoolean(DONE);
+            backgroundColor = savedInstanceState.getIntArray(COLOR);
+            if (done) {
+                textButton = getString(R.string.next_button);
+                for (int i = 0; i < 8; i++) {
+                    boxes[i].setEnabled(false);
+                    if (backgroundColor[i] != 0) {
+                        boxes[i].setBackgroundResource(backgroundColor[i]);
+                    }
+                }
+            }
+        }
+
         final Button nextButton = (Button) findViewById(R.id.next_button);
+        nextButton.setText(textButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,14 +64,17 @@ public class CheckListActivity extends MainActivity {
                     for (int i = 0; i < 8; i++) {
                         if (boxes[i].isChecked()) {
                             if (correctAnswer[i] == 1) {
+                                backgroundColor[i] = R.color.correctAnswerDark;
                                 boxes[i].setBackgroundResource(R.color.correctAnswerDark);
                                 partialScore++;
                             } else {
+                                backgroundColor[i] = R.color.wrongAnswerDark;
                                 boxes[i].setBackgroundResource(R.color.wrongAnswerDark);
                                 partialScore--;
                             }
                         }
                         else if (correctAnswer[i] == 1) {
+                            backgroundColor[i] = R.color.correctAnswerColor;
                             boxes[i].setBackgroundResource(R.color.correctAnswerColor);
                         }
                         boxes[i].setEnabled(false);
@@ -67,5 +92,13 @@ public class CheckListActivity extends MainActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putBoolean(DONE, done);
+        savedInstanceState.putIntArray(COLOR, backgroundColor);
+
+        super.onSaveInstanceState(savedInstanceState);
     }
 }

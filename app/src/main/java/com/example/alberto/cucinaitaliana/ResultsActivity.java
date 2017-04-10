@@ -2,14 +2,11 @@ package com.example.alberto.cucinaitaliana;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import static com.example.alberto.cucinaitaliana.MainActivity.score;
-
-public class ResultsActivity extends AppCompatActivity {
+public class ResultsActivity extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +22,7 @@ public class ResultsActivity extends AppCompatActivity {
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.questionNumber = 0;
+                MainActivity.questionNumber = -1;
                 MainActivity.score = 0;
                 Intent i=new Intent(ResultsActivity.this, MainActivity.class);
                 startActivity(i);

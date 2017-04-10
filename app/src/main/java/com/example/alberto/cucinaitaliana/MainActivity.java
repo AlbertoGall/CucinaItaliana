@@ -9,7 +9,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     public static int score = 0;
-    public static int questionNumber = 0;
+    public static int questionNumber = -1;
     public static int[] correctAnswer = new int[8];
     public static String[] text;
     final public static int totalQuestionNumber = 7;
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Button start = (Button) findViewById(R.id.start_button);
         start.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                questionNumber = 0;
                 nextQuestion();
             }
         });
@@ -72,9 +73,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
-        if (questionNumber > 0) {
-            questionNumber--;
+        if (questionNumber == -1){
+            finishAffinity();
         }
-        super.onBackPressed();
+        else {
+            questionNumber = -1;
+            Intent i = getBaseContext().getPackageManager()
+                    .getLaunchIntentForPackage( getBaseContext().getPackageName() );
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(i);
+        }
     }
 }
