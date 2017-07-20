@@ -46,7 +46,7 @@ public class OpenAnswerActivity extends MainActivity {
             @Override
             public void onClick(View view) {
                 if (done == 0) {
-                    String answer = openAnswerView.getText().toString();
+                    String answer = openAnswerView.getText().toString().trim();
                     if (answer.equalsIgnoreCase(text[1])){
                         done = 1;
                         score+=2;

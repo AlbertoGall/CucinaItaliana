@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static int score = 0;
+    public static int score;
     public static int questionNumber = -1;
     public static int[] correctAnswer = new int[8];
     public static String[] text;
